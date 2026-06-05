@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server description="IAEM Kontakten Backend">
+  <featureManager>
+    <feature>restfulWS-3.1</feature>
+    <feature>jsonb-3.0</feature>
+    <feature>cdi-4.0</feature>
+    <feature>mpOpenAPI-3.1</feature>
+    <feature>persistence-3.1</feature>
+    <feature>jdbc-4.2</feature>
+  </featureManager>
+
+  <httpEndpoint id="defaultHttpEndpoint"
+                httpPort="9080"
+                httpsPort="9443"/>
+
+  <dataSource id="epatraktorDS" jndiName="jdbc/epatraktor">
+    <jdbcDriver libraryRef="pgLib"/>
+    <properties.postgresql
+        serverName="localhost"
+        portNumber="5433"
+        databaseName="epatraktor"
+        user="epatraktor"
+        password="epatraktor"
+        currentSchema="epatraktor"/>
+  </dataSource>
+
+  <library id="pgLib">
+    <fileset dir="${server.config.dir}/lib" includes="postgresql-*.jar"/>
+  </library>
+
+  <webApplication location="iaem-backend.war" contextRoot="/iaem"/>
+
+  <logging consoleLogLevel="INFO"/>
+</server>

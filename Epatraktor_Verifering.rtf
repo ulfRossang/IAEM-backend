@@ -1,0 +1,105 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red0\green0\blue0;\red202\green51\blue35;
+\red57\green192\blue38;}
+{\*\expandedcolortbl;;\cspthree\c100000\c100000\c100000;\csgray\c0;\cssrgb\c83899\c28663\c18026;
+\cssrgb\c25706\c77963\c19557;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww29460\viewh16760\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 \uc0\u9210 \cf3  H\'e4r \'e4r alla curl-kommandon f\'f6r att verifiera varje endpoint:\
+\
+  BASE=\cf4 "http://localhost:9080/iaem/api/v1"\cf3 \
+\
+  \cf5 # \uc0\u9472 \u9472  Kunder \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \cf3 \
+  curl -s \cf4 "\cf3 $BASE/kunder/KD-71042"\
+  curl -s \cf4 "\cf3 $BASE/kunder/KD-38815"\
+  curl -s \cf4 "\cf3 $BASE/kunder/KD-90423"\
+\
+  \cf5 # \uc0\u9472 \u9472  Meddelanden \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \cf3 \
+  curl -s \cf4 "\cf3 $BASE/kunder/KD-71042/meddelanden"\
+  curl -s \cf4 "\cf3 $BASE/kunder/KD-71042/meddelanden?page=1&size=5"\
+  curl -s \cf4 "\cf3 $BASE/kunder/KD-71042/meddelanden?from=2025-01-01&to=2025-12-31"\
+  curl -s \cf4 "\cf3 $BASE/kunder/KD-71042/meddelanden/MSG-2024-0041"\
+  curl -s \cf4 "\cf3 $BASE/kunder/KD-38815/meddelanden"\
+  curl -s \cf4 "\cf3 $BASE/kunder/KD-90423/meddelanden"\
+\
+  \cf5 # \uc0\u9472 \u9472  Utskick \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \cf3 \
+  curl -s \cf4 "\cf3 $BASE/kunder/KD-71042/utskick"\
+  curl -s \cf4 "\cf3 $BASE/kunder/KD-71042/utskick?kategori=Avr\'e4kningsnota"\
+  curl -s \cf4 "\cf3 $BASE/kunder/KD-71042/utskick/UTK-2025-0001"\
+  curl -s \cf4 "\cf3 $BASE/kunder/KD-71042/utskick/UTK-2025-0003"\
+\
+  \cf5 # \uc0\u9472 \u9472  Dokument \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \cf3 \
+  curl -s \cf4 "\cf3 $BASE/kunder/KD-71042/dokument"\
+  curl -s \cf4 "\cf3 $BASE/kunder/KD-71042/dokument?forbindelse=SE-001"\
+  curl -s \cf4 "\cf3 $BASE/kunder/KD-71042/dokument?datumFran=2025-09-01&datumTill=2025-12-31"\
+\
+  \cf5 # \uc0\u9472 \u9472  Kuvert \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \cf3 \
+  curl -s \cf4 "\cf3 $BASE/kuvert/ENV-2024-88441"\
+\
+  \cf5 # \uc0\u9472 \u9472  Utskick-installningar \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \cf3 \
+  curl -s \cf4 "\cf3 $BASE/kunder/KD-71042/utskick-installningar"\
+  curl -s -X PUT \cf4 "\cf3 $BASE/kunder/KD-71042/utskick-installningar" \\\
+    -H \cf4 "Content-Type: application/json"\cf3  \\\
+    -d \cf4 '[\{"kategori":"Kontoutdrag","avser":"Konto","forbindelse":"SE-001-001","papper":true,"internet":false\}]'\cf3 \
+\
+  \cf5 # \uc0\u9472 \u9472  Publicering installningar \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \cf3 \
+  curl -s \cf4 "\cf3 $BASE/publicering/installningar"\
+  curl -s -X POST \cf4 "\cf3 $BASE/publicering/installningar" \\\
+    -H \cf4 "Content-Type: application/json"\cf3  \\                                                           \
+    -d \cf4 '\{"systembeteckning":"TEST","informationsId":"Q999","publiceraAutomatiskt":true\}'\cf3 \
+  curl -s -X PUT \cf4 "\cf3 $BASE/publicering/installningar/SAM-001" \\\
+    -H \cf4 "Content-Type: application/json"\cf3  \\\
+    -d \cf4 '\{"systembeteckning":"EPOX","informationsId":"Q294902","publiceraAutomatiskt":true\}'\cf3 \
+  curl -s -X DELETE \cf4 "\cf3 $BASE/publicering/installningar/SAM-001"\
+\
+  \cf5 # \uc0\u9472 \u9472  Publicering jobb \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \cf3 \
+  curl -s \cf4 "\cf3 $BASE/publicering/jobb"\
+  curl -s -X POST \cf4 "\cf3 $BASE/publicering/jobb/EPOX-JOB-001/godkann" \\\
+    -H \cf4 "Content-Type: application/json"\cf3  \\\
+    -d \cf4 '\{"godkand":true\}'\cf3 \
+  curl -s -X POST \cf4 "\cf3 $BASE/publicering/jobb/REVL-JOB-002/godkann" \\\
+    -H \cf4 "Content-Type: application/json"\cf3  \\\
+    -d \cf4 '\{"godkand":false\}'\cf3 \
+\
+  \cf5 # \uc0\u9472 \u9472  Informationsprodukter \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \cf3 \
+  curl -s \cf4 "\cf3 $BASE/informationsprodukter"\
+  curl -s \cf4 "\cf3 $BASE/informationsprodukter?land=Sverige"\
+  curl -s -X POST \cf4 "\cf3 $BASE/informationsprodukter" \\\
+    -H \cf4 "Content-Type: application/json"\cf3  \\\
+    -d \cf4 '\{"namn":"Test","land":"Norge","status":"Aktiv","notifieringskategori":"","systembeteckning":"TEST","insynsskyddad":f\cf3 \
+  \cf4 alse,"defaultkanaler":\{"papper":false,"internet":true\},"till\'e5tnaKanaler":\{"papper":true,"internet":true\},"obligatoriskaKan\cf3 \
+  \cf4 aler":\{"papper":false,"internet":false\},"avgiftsidPapper":"100","avgiftsidInternet":"101","visningstidEArkivMan":12,"lagri\cf3 \
+  \cf4 ngstidDiskMan":24,"meddelandetext":""\}'\cf3 \
+  curl -s -X PUT \cf4 "\cf3 $BASE/informationsprodukter/32225" \\\
+    -H \cf4 "Content-Type: application/json"\cf3  \\\
+    -d \cf4 '\{"namn":"Konto upd","land":"Sverige","status":"Aktiv","notifieringskategori":"NOT-01","systembeteckning":"INL\'c5","ins\cf3 \
+  \cf4 ynsskyddad":false,"defaultkanaler":\{"papper":false,"internet":true\},"till\'e5tnaKanaler":\{"papper":true,"internet":true\},"obl\cf3 \
+  \cf4 igatoriskaKanaler":\{"papper":false,"internet":false\},"avgiftsidPapper":"222","avgiftsidInternet":"223","visningstidEArkivM\cf3 \
+  \cf4 an":120,"lagringstidDiskMan":132,"meddelandetext":""\}'\cf3 \
+  \
+  \cf5 # \uc0\u9472 \u9472  Debiteringsuppgifter \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \cf3                                \
+  curl -s \cf4 "\cf3 $BASE/debiteringsuppgifter"\
+  curl -s -X POST \cf4 "\cf3 $BASE/debiteringsuppgifter" \\\
+    -H \cf4 "Content-Type: application/json"\cf3  \\\
+    -d \cf4 '\{"produktid":"DEB-TEST","meddelandeid":"-","systembeteckning":"TEST","antsKodInternet":"999","antsKodEjInternet":"99\cf3 \
+  \cf4 8","resultatstalle":"12345"\}'\cf3 \
+  curl -s -X PUT \cf4 "\cf3 $BASE/debiteringsuppgifter/DEB-001" \\\
+    -H \cf4 "Content-Type: application/json"\cf3  \\\
+    -d \cf4 '\{"produktid":"DEB-001","meddelandeid":"-","systembeteckning":"INL\'c5","antsKodInternet":"217899","antsKodEjInternet":"\cf3 \
+  \cf4 217999","resultatstalle":"68821"\}'\cf3 \
+  curl -s -X DELETE \cf4 "\cf3 $BASE/debiteringsuppgifter/DEB-TEST"\
+\
+  \cf5 # \uc0\u9472 \u9472  Massutskick \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \cf3       \
+  curl -s \cf4 "\cf3 $BASE/massutskick"                                                                       \
+  curl -s -X POST \cf4 "\cf3 $BASE/massutskick" \\\
+    -H \cf4 "Content-Type: application/json"\cf3  \\\
+    -d \cf4 '\{"land":"Sverige","avsandare":"Handelsbanken","amne":"Nytt \cf3 \
+  \cf4 test","utskicksdatum":"2026-07-01","notifieringskategori":"","meddelande":"Testmeddelande"\}'\cf3 \
+  curl -s -X PUT \cf4 "\cf3 $BASE/massutskick/250" \\                                                          \
+    -H \cf4 "Content-Type: application/json"\cf3  \\\
+    -d \cf4 '\{"land":"Sverige","avsandare":"Handelsbanken","amne":"Uppdaterat","utskicksdatum":"2026-06-25","notifieringskategori\cf3 \
+  \cf4 ":"","meddelande":""\}'\cf3 \
+  curl -s -X POST \cf4 "\cf3 $BASE/massutskick/250/klarmarkera"\
+  curl -s -X DELETE \cf4 "\cf3 $BASE/massutskick/250"}
