@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<server description="IAEM Kontakten Backend">
+<server description="IAEM Kontakten Backend (H2 in-memory)">
   <featureManager>
     <feature>restfulWS-3.1</feature>
     <feature>jsonb-3.0</feature>
@@ -13,22 +13,22 @@
                 httpPort="9080"
                 httpsPort="9443"/>
 
+  <!-- H2 in-memory database – schema EPATRAKTOR created via INIT, kept alive with DB_CLOSE_DELAY=-1 -->
   <dataSource id="epatraktorDS" jndiName="jdbc/epatraktor">
-    <jdbcDriver libraryRef="pgLib"/>
-    <properties.postgresql
-        serverName="localhost"
-        portNumber="5433"
-        databaseName="epatraktor"
-        user="epatraktor"
-        password="epatraktor"
-        currentSchema="epatraktor"/>
+    <jdbcDriver libraryRef="h2Lib"/>
+    <properties url="jdbc:h2:mem:epatraktor;DB_CLOSE_DELAY=-1;MODE=MySQL;INIT=CREATE SCHEMA IF NOT EXISTS EPATRAKTOR"
+                user="sa"
+                password=""/>
   </dataSource>
 
-  <library id="pgLib">
-    <fileset dir="${server.config.dir}/lib" includes="postgresql-*.jar"/>
+  <library id="h2Lib">
+    <fileset dir="${server.config.dir}/lib" includes="h2-*.jar"/>
   </library>
 
-  <webApplication location="iaem-backend.war" contextRoot="/iaem"/>
+  <!-- third-party visibility lets the app extend EclipseLink classes (e.g. H2V2Platform extends H2Platform) -->
+  <webApplication location="iaem-backend.war" contextRoot="/iaem">
+    <classloader apiTypeVisibility="spec, ibm-api, api, stable, beta, third-party"/>
+  </webApplication>
 
   <logging consoleLogLevel="INFO"/>
 </server>

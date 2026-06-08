@@ -29,7 +29,14 @@
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
 
     <properties>
-      <property name="jakarta.persistence.schema-generation.database.action" value="none"/>
+      <!-- H2 2.x: DDL from custom H2 2.x-compatible SQL scripts (AUTO_INCREMENT, not BIGINT IDENTITY) -->
+      <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+      <property name="jakarta.persistence.schema-generation.create-source" value="script"/>
+      <property name="jakarta.persistence.schema-generation.drop-source" value="script"/>
+      <property name="jakarta.persistence.schema-generation.create-script-source" value="META-INF/create-h2.sql"/>
+      <property name="jakarta.persistence.schema-generation.drop-script-source" value="META-INF/drop-h2.sql"/>
+      <!-- Custom platform: overrides CALL IDENTITY() → CALL LAST_INSERT_ID() for H2 2.x -->
+      <property name="eclipselink.target-database" value="se.handelsbanken.iaem.H2V2Platform"/>
     </properties>
   </persistence-unit>
 </persistence>
