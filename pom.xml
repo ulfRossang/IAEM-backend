@@ -55,6 +55,12 @@
         <configuration>
           <serverName>iaemServer</serverName>
           <looseApplication>false</looseApplication>
+          <runtimeArtifact>
+            <groupId>io.openliberty</groupId>
+            <artifactId>openliberty-runtime</artifactId>
+            <version>24.0.0.12</version>
+            <type>zip</type>
+          </runtimeArtifact>
         </configuration>
       </plugin>
       <plugin>
